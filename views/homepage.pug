@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="style.css")
+    title Custom Object Table
+  body
+    h1 Custom Object Table
+    a(href="/update-form") Add/Update this table
+    .container
+      table
+        thead 
+          tr
+            th Email
+            th Firstname
+            th Lastname
+            th Phone Number
+        tbody 
+          each item in data
+            tr
+              td= item.properties.email
+              td= item.properties.firstname
+              td= item.properties.lastname
+              td= item.properties.mobilephone
